@@ -2,6 +2,8 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
+    "start": "mix phoenix.server",
+    "test": "mix test",
     "deploy": "brunch build --production",
     "watch": "brunch watch --stdin"
   },

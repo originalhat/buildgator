@@ -1,0 +1,83 @@
+{
+  "event": "build.scheduled",
+  "build": {
+    "id": "7cbad3b3-6a6b-4aba-be40-fb0bcede509f3",
+    "url": "https://api.buildkite.com/v2/organizations/tracker/pipelines/weekday-morning/builds/174",
+    "web_url": "https://buildkite.com/tracker/weekday-morning/builds/174",
+    "number": 174,
+    "state": "passed",
+    "blocked": false,
+    "message": "bb: webhook-test",
+    "commit": "HEAD",
+    "branch": "master",
+    "tag": null,
+    "source": "ui",
+    "creator": {
+      "id": "23631b2a-371e-42e2-abc4-bd4ba17d6f83",
+      "name": "Devin🛡Brown",
+      "email": "debrown@pivotal.io",
+      "avatar_url": "https://www.gravatar.com/avatar/c6c5a61bb16c20f6337313373a3f1274",
+      "created_at": "2017-03-08 17:35:26 UTC"
+    },
+    "created_at": "2017-07-16 14:01:10 UTC",
+    "scheduled_at": "2017-07-16 14:01:10 UTC",
+    "started_at": null,
+    "finished_at": null,
+    "meta_data": {},
+    "pull_request": null
+  },
+  "pipeline": {
+    "id": "67968c0e-67d7-42b9-af3f-a10b4fab5253",
+    "url": "https://api.buildkite.com/v2/organizations/tracker/pipelines/weekday-morning",
+    "web_url": "https://buildkite.com/tracker/weekday-morning",
+    "name": "Weekday Morning",
+    "description": "External and other daily tests.",
+    "slug": "weekday-morning",
+    "repository": "git@github.com:pivotaltracker/tracker.git",
+    "branch_configuration": "master",
+    "default_branch": "master",
+    "provider": {
+      "id": "github",
+      "settings": {
+        "trigger_mode": "none",
+        "build_pull_requests": true,
+        "pull_request_branch_filter_enabled": false,
+        "skip_pull_request_builds_for_existing_commits": true,
+        "build_pull_request_forks": false,
+        "build_tags": false,
+        "publish_commit_status": true,
+        "publish_commit_status_per_step": false,
+        "repository": "pivotaltracker/tracker",
+        "pull_request_branch_filter_configuration": ""
+      },
+      "webhook_url": "https://webhook.buildkite.com/deliver/8eea7998a668a8b9f47dd0c129f5f051c8a5022cc57769e161"
+    },
+    "builds_url": "https://api.buildkite.com/v2/organizations/tracker/pipelines/weekday-morning/builds",
+    "badge_url": "https://badge.buildkite.com/da98c13864577e2712d15eac6f965d7dee7ece420c63cb0d1f.svg",
+    "created_at": "2017-03-28 16:36:20 UTC",
+    "env": {},
+    "scheduled_builds_count": 1,
+    "running_builds_count": 0,
+    "scheduled_jobs_count": 1,
+    "running_jobs_count": 0,
+    "waiting_jobs_count": 0,
+    "steps": [
+      {
+        "type": "script",
+        "name": ":pipeline:",
+        "command": ".buildkite/pipeline_weekday_morning.sh",
+        "artifact_paths": "",
+        "branch_configuration": "",
+        "env": {},
+        "timeout_in_minutes": null,
+        "agent_query_rules": [],
+        "concurrency": null,
+        "parallelism": null
+      }
+    ]
+  },
+  "sender": {
+    "id": "23631b2a-371e-42e2-abc4-bd4ba17d6f83",
+    "name": "Devin🛡Brown"
+  }
+}

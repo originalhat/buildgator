@@ -9,3 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+Enum.each  Path.wildcard("priv/repo/fixtures/*.json"), fn fixture ->
+  Buildgator.Repo.insert!(%Buildgator.Build{build: Poison.decode!(File.read!(fixture))})
+end
+

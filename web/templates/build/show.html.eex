@@ -1,0 +1,27 @@
+<h2>Event</h2>
+
+<code>
+  <%= Poison.encode!(@build.build["event"]) %>
+</code>
+
+
+<h2>Build</h2>
+
+<code>
+  <%= Poison.encode!(@build.build["build"]) %>
+</code>
+
+
+<h2>Pipeline</h2>
+
+<code>
+  <%= Poison.encode!(@build.build["pipeline"]) %>
+</code>
+
+
+<h2>Sender</h2>
+
+<code>
+  <%= Poison.encode!(@build.build["sender"]) %>
+</code>
+

@@ -1,0 +1,23 @@
+<h2>Listing builds</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Build</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for build <- @builds do %>
+    <tr>
+      <td><%= build.build["pipeline"]["slug"] %>/<%= build.build["build"]["branch"] %></td>
+      <!--<td><%= inspect build.build["build"] %></td>-->
+
+      <td class="text-right">
+        <%= link "Show", to: build_path(@conn, :show, build), class: "btn btn-default btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
