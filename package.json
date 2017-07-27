@@ -2,9 +2,10 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
+    "deploy": "brunch build --production",
+    "push": "cf push buildgator -b https://github.com/thewoolleyman/heroku-buildpack-elixir.git",
     "start": "mix phoenix.server",
     "test": "mix test",
-    "deploy": "brunch build --production",
     "watch": "brunch watch --stdin"
   },
   "dependencies": {
