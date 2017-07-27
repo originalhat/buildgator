@@ -5,7 +5,7 @@ defmodule Buildgator.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
-    plug :protect_from_forgery
+    # plug :protect_from_forgery # TODO: make this less terrible? what's the right way to handle incoming webhooks?
     plug :put_secure_browser_headers
   end
 
