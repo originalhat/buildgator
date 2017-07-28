@@ -13,9 +13,9 @@ defmodule Buildgator.BuildController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, _params) do
+  def create(conn, build_params) do
     # FIXME: don't blindly pass params into the DB
-    changeset = Build.changeset(%Build{build: _params})
+    changeset = Build.changeset(%Build{build: build_params})
 
     case Repo.insert(changeset) do
       {:ok, _build} ->

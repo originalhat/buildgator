@@ -1,1 +1,36 @@
 /* This file is for your main application css. */
+
+.build {
+  align-items: center;
+  display: flex;
+}
+
+.build div {
+  margin: 8px 4px;
+}
+
+.build__state {
+  border-radius: 16px;
+  height: 16px;
+  width: 16px;
+}
+
+.build__state--scheduled {
+  background-color: #f2e187;
+  border: 1px solid #c1b46c;
+}
+
+.build__state--running {
+  background-color: #f2e187;
+  border: 1px solid #c1b46c;
+}
+
+.build__state--failed {
+  background-color: #f83f23;
+  border: 1px solid #c6321c;
+}
+
+.build__state--passed {
+  background-color: #b0df21;
+  border: 1px solid #8cb21a;
+}

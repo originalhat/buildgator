@@ -2,8 +2,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "brunch build --production",
-    "push": "cf push buildgator",
+    "deploy": "cf push buildgator",
     "start": "mix phoenix.server",
     "test": "mix test",
     "watch": "brunch watch --stdin"

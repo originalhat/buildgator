@@ -1,23 +1,14 @@
 <h2>Listing builds</h2>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Build</th>
-
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
 <%= for build <- @builds do %>
-    <tr>
-      <td><%= build.build["pipeline"]["slug"] %>/<%= build.build["build"]["branch"] %></td>
-      <!--<td><%= inspect build.build["build"] %></td>-->
+  <div class="build">
+    <div class='build__state build__state--<%= build.build["build"]["state"] %>'></div>
+    <div><%= build.build["pipeline"]["slug"] %></div>
+    <div><%= build.build["build"]["branch"] %></div>
 
-      <td class="text-right">
-        <%= link "Show", to: build_path(@conn, :show, build), class: "btn btn-default btn-xs" %>
-      </td>
-    </tr>
+    <div class="text-right">
+      <%= link "Show", to: build_path(@conn, :show, build), class: "btn btn-default btn-xs" %>
+      <%= link "Delete", to: build_path(@conn, :delete, build), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+    </div>
+  </div>
 <% end %>
-  </tbody>
-</table>
