@@ -4,7 +4,7 @@ defmodule Buildgator.BuildController do
   alias Buildgator.Build
 
   def index(conn, _params) do
-    builds = Repo.all(Build)
+    builds = Enum.reverse(Repo.all(Build))
     render(conn, "index.html", builds: builds)
   end
 
@@ -20,8 +20,8 @@ defmodule Buildgator.BuildController do
     case Repo.insert(changeset) do
       {:ok, _build} ->
         conn
-        |> put_flash(:info, "Build created successfully.")
-        |> redirect(to: build_path(conn, :index))
+        |> put_resp_header("content-type", "application/json; charset=utf-8")
+        |> send_resp(200, Poison.encode!(build_params))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
