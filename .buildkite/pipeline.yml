@@ -1,4 +1,4 @@
 steps:
-  - label: Example Test
-    command: echo "Hello!"
+  - label: ":elixir:"
+    command: yarn test
 
