@@ -21,6 +21,12 @@ defmodule Buildgator.Router do
     resources "/builds", BuildController
   end
 
+  scope "/api", Buildgator do
+    pipe_through :api
+
+    get "/builds", ApiController, :builds
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Buildgator do
   #   pipe_through :api
