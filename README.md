@@ -48,3 +48,4 @@ cf push buildgator -b https://github.com/thewoolleyman/heroku-buildpack-elixir.g
 ```bash
 mix phoenix.gen.secret
 ```
+1
